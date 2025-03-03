@@ -60,6 +60,17 @@ void string_insert_chr(String *str, char c, size_t pos)
     str->items[pos] = c;
 }
 
+void string_remove_chr(String *str, size_t pos)
+{
+    if(pos > str->count - 1) return;
+
+    for(size_t i = pos; i < str->count - 1; i++) {
+        str->items[i] = str->items[i + 1];
+    }
+
+    str->count--;
+}
+
 void string_free(String *str)
 {
     da_free(str);

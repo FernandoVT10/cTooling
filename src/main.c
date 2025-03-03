@@ -13,6 +13,8 @@ int main(void)
     string_append_string(&str, bye);
     string_append_chr(&str, '\0');
 
+    string_remove_chr(&str, 5);
+
     printf("String \"%s\" is length: %lu\n", str.items, str.count - 1);
 
     string_free(&str);

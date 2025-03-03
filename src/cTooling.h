@@ -49,6 +49,7 @@ void string_append_chr(String *str, char c);
 void string_append_string(String *dest, String src);
 void string_insert_text(String *str, const char *text, size_t pos);
 void string_insert_chr(String *str, char c, size_t pos);
+void string_remove_chr(String *str, size_t pos);
 void string_free(String *str);
 
 typedef struct LNode LNode;
