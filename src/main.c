@@ -13,9 +13,12 @@ int main(void)
     string_append_string(&str, bye);
     string_append_chr(&str, '\0');
 
-    string_remove_chr(&str, 5);
+    // string_remove_chr(&str, 5);
+    string_remove_slice(&str, 19, 18);
 
-    printf("String \"%s\" is length: %lu\n", str.items, str.count - 1);
+    if(str.count > 0) {
+        printf("String \"%s\" is length: %lu\n", str.items, str.count - 1);
+    }
 
     string_free(&str);
     string_free(&bye);
